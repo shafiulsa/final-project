@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="t.css">
+</head>
+
+<body>
+
+    <div id="title">
+        <h1>
+            সমন্বিত ডায়েট প্রেসক্রিপশন
+        </h1>
+        <h3>
+            (সুষম খাদ্য, শারীরিক ব্যায়াম এবং কার্যকরী খাবারের সমন্বয়)</h3>
+        <hr>
+    </div>
+
+    <div id="c">
+
+        <!-- first row -->
+        <div class="fr">
+            <!-- name  -->
+            <label for="uname">নামঃ </label>
+            <input type="text" id="uname" name="name" />
+
+            <!-- age  -->
+            <label for="uname">বয়সঃ</label>
+            <input type="text" id="uname" name="name" class="sbx" />
+            <!-- sex -->
+            <form id="form1">
+                <label for="uname"> সেক্স: </label>
+                <select width=300 style="width: 100px; height: 30px;">
+                    <option value='blue'>পুরুষ </option>
+                    <option value='green'> মহিলা</option>
+                    <option value='red'>ছেলে</option>
+                    <option value='yellow'>মেয়ে</option>
+                    <option value='yellow'>বলতে চাই না</option>
+                </select>
+            </form>
+
+            <label for="uname">উচ্চতাঃ  </label>
+            <input type="text" id="uname" name="name" class="sbx" />
+            <label >সেমি</label>
+
+        </div>
+
+
+        <!-- secnod row -->
+        <div class="sr">
+            <label for="uname">বর্তমান ওজনঃ(কেজি ) </label>
+            <input type="text" id="uname" name="name" class="sbx" />
+
+            <label for="uname">আদর্শ ওজনঃ(কেজি ) </label>
+            <input type="text" id="uname" name="name" class="sbx" />
+
+            <label for="uname"> অতিরিক্ত ওজনঃ(কেজি ) </label>
+            <input type="text" id="uname" name="name" class="sbx" />
+
+        </div>
+
+        <!-- third row -->
+        <div class="tr">
+
+            <label for="uname">Target: </label>
+            <input type="text" id="uname" name="name" class="sbx" />
+            <label for="uname">kg in next</label>
+            <input type="number" class="sbx">
+            <label for="">Week</label>
+        </div>
+
+
+        <!-- forth row -->
+
+        <div class="fr">
+
+            <form action="">
+                <label for="uname"> সমস্যাঃ</label>
+                <select width=300 style="width: 100px">
+                    <option value='blue'>A </option>
+                    <option value='green'> c</option>
+                    <option value='red'>b</option>
+                    <option value='yellow'>c</option>
+                    <option value='yellow'>বলতে চাই না</option>
+                </select>
+            </form>
+        </div>
+
+        <!-- 5th  -->
+        <div class="fir">
+            <label for="uname"> জীব্ন-ধারা ন্বনযদ্যন্বশকা এব্ং ডায়য়টঃ </label>
+            <select width=300 style="width: 100px; height: 30px;">
+                <option value='blue'>পুরুষ </option>
+                <option value='green'> মহিলা</option>
+                <option value='red'>ছেলে</option>
+                <option value='yellow'>মেয়ে</option>
+                <option value='yellow'>বলতে চাই না</option>
+            </select>
+        </div>
+
+
+
+        <!-- 6th row -->
+        <div class="sxr">
+
+
+
+            <form action="/action_page.php">
+                <label for="uname">র্জতঃ(মেয়লাে্ালমর)</label>
+                <input type="text" id="uname" name="name" class="sbx" />
+                <label for="birthday">Starting Diet: </label>
+                <input type="date" id="birthday" name="birthday">
+
+                <label for="birthday">Next Visit:</label>
+                <input type="date" id="birthday" name="birthday">
+
+            </form>
+
+        </div>
+
+
+        <!-- 7th row -->
+        <div class="ser">
+           <form action="">
+         
+            <label for="birthday">দৈনিক খাদ্য তালিকা</label>
+            <input type="text" class="sbx">
+            <label >সপ্তাহ</label>
+   
+           </form>
+        </div>
+
+    </div>
+   
+
+    <button onclick="pr()" >print it </button>
+
+    <script src="t.js"></script>
+
+
+</body>
+
+</html>

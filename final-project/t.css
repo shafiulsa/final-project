@@ -1,0 +1,19 @@
+#title{
+    text-align: center;
+}
+h1{
+    color: rgb(0, 81, 255);
+}
+body{
+    text-align: center;
+}
+.fr{
+    display: flex;
+    gap: 20px;
+}
+
+/* box ar size komai */
+.sbx{
+    width: 40px;
+    background-color: red;
+}
