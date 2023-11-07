@@ -1,0 +1,3591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dr pr</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- box icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav container f">
+
+            <ul class="navlist">
+                <button class="btn"><a href="#rogi">রুগীর তথ্য</a></button>
+                <button class="btn"><a href="#sokalp">সকালের পানীয় </a></button>
+                <button class="btn"><a href="#cha">চা</a></button>
+                <button class="btn"><a href="#sokal">সকাল (৭.০০-৮.০০)</a> </button>
+                <button class="btn"> <a href="#msokal">মধ্য-সকাল (১০.৩০-১১.০০)</a></button>
+                <button class="btn"><a href="#dupur">দুপুর (১.৩০-২.00)</a> </button>
+                <button class="btn"> <a href="#bikel">বিকেল (৫.৩০ - ৬.০০)</a></button>
+                <button class="btn"><a href="#rat1">রাত(৮.৩০-৯.00) </a> </button>
+                <button class="btn"> <a href="#rat2">রাত (১০.০০ - ১০.৩০) </a></button>
+                <button class="btn"><a href="#khabar">খাবার গ্রহণ নির্দেশিকা </a></button>
+                <button class="btn"> <a href="#bam">ব্যায়াম নির্দেশিকা </a></button>
+
+
+            </ul>
+
+            <!-- cart icon -->
+            <i class='bx bx-plus-medical' id="cart-icon"></i>
+
+            <button class="btn" onclick="pr()">print </button>
+
+
+            <!-- cart -->
+            <div class="cart" id="c">
+                
+                 <img src="n.jpg" alt="soorr" style="display: block;">
+                <!-- content -->
+                <div class="cart-content">
+
+                </div>
+                <div>
+                    <pre>
+                    <h3>
+    Checked By
+    Professor Dr. A.K. Obidul Huq
+    Dept. of FTNS, MBSTU,
+    Tangail-1902.
+    Adviser, INHRC,
+    Mohammadpur, Dhaka-1207.
+    E-mail: profobidul@gmail.com
+                    </h3>
+                    </pre>
+
+
+                </div>
+
+                <i class='bx bx-x' id="close-cart"></i>
+                <button ></button>
+            </div>
+        </div>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="fromfill container" id="rogi">
+        <div class="shop-content">
+
+            <form onsubmit="printform()" class="frm">
+
+                <!-- intro -->
+                <div class="input-field" style=" text-align: center;">
+                    <h1>
+                        <pre>রুগীর তথ্য
+                        </pre>
+                    </h1>
+                </div>
+                <!-- main -->
+
+                <div class="input-field" style="display: flex; gap: 20px;">
+                    <div>
+                        <label for="">
+                            <h3>ID NO :</h3>
+                            <input type="text" placeholder="নাম" style="width: 150px; height: 45px;" class="b" id="id">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="">
+                            <h3>Date:</h3> <input type="date" placeholder="নাম" style="width: 170px; height: 45px;"
+                                class="b" id="dat">
+                        </label>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="input-field" style="display: flex; gap: 20px;">
+                    <label for="">
+                        <h3> নামঃ <input type="text" placeholder="নাম" class="b" id="name"></h3>
+                    </label>
+
+
+                    <label for="">
+                        <h3> বয়সঃ <input type="text" placeholder="বয়সঃ" style="width: 160px; height: 45px;" class="b"
+                                id="byos">
+                        </h3>
+                    </label>
+
+                    <label for="uname">
+                        <h3>সেক্স:
+
+                           <!-- <input list="browser">
+                            <datalist id="browser"  width=300 style="width: 150px; height: 45px;" id="sex">
+                                <option>পুরুষ </option>
+                                <option> মহিলা</option>
+                                <option>ছেলে</option>
+                                <option>মেয়ে</option>
+                                <option>বলতে চাই না</option>
+                            </datalist> -->
+
+
+                            <select width=300 style="width: 150px; height: 45px;" id="sex">
+                                <option>পুরুষ </option>
+                                <option> মহিলা</option>
+                                <option>ছেলে</option>
+                                <option>মেয়ে</option>
+                                <option>বলতে চাই না</option>
+                            </select>
+                        </h3>
+                    </label>
+                    <label for="">
+                        <h3>উচ্চতাঃ
+                            <input type="text" placeholder="উচ্চতা" style="width: 160px; height: 45px;"
+                                oninput="calculateBMI()" class="b" id="height">
+                            <label>সেমি</label>
+                        </h3>
+                    </label>
+
+                </div>
+                <!-- weight -->
+
+                <div class="input-field" style="display: flex; gap: 20px;">
+
+                    <label for="">
+                        <h3> বর্তমান ওজনঃ(কেজি ) <input type="text" placeholder="" style="width: 200px; height: 45px;"
+                                class="b" id="wet" oninput="calculateBMI()">
+                        </h3>
+                    </label>
+
+                    <label for="">
+                        <h3>আদর্শ ওজনঃ(কেজি ) <input type="text" placeholder="" style="width: 200px; height: 45px;"
+                                class="b" id="bwet"></h3>
+                    </label>
+
+                    <label for="">
+                        <h3>কম ওজন/অতিরিক্ত ওজনঃ(কেজি )
+                            <input type="text" placeholder="" style="width: 200px; height: 45px;" class="b" id="ewet">
+
+                        </h3>
+
+                    </label>
+
+                </div>
+
+                <div class="input-field" style="display: flex; gap: 20px;">
+
+
+                    <input type="checkbox" id="calculateCheckbox" style="height: 40px; width: 80px; "
+                        onchange="calculateBMI()">
+
+                    <label for="bmi">
+                        <h2>BMI:</h2>
+                    </label>
+                    <input type="text" id="bmi" placeholder="BMI" disabled>
+
+                </div>
+
+
+                <div class="input-field" style="display: flex; gap: 20px;">
+
+
+
+                    <label for="">
+                        <h3> Target:<input type="text" id="terget" /></h3>
+                    </label>
+
+                    <label for="">
+                        <h3> kg in next <input type="number" id="week">
+                            <label for="">Week</label>
+                        </h3>
+                    </label>
+
+
+                    </h3>
+                </div>
+
+                <!-- problem -->
+                <div class="input-field" style="display: flex; gap: 20px;">
+                    <label for="uname">
+                        <h3>সমস্যাঃ
+                            <select width=300 class="b" style="width: 245px; height: 45px;" id="prob" autocomplete="off">
+                                <option></option>
+                                <option> BP</option>
+                                <option>Cholestero</option>
+                                <option>TG</option>
+                                <option>TSH</option>
+
+
+                                <option>LDL</option>
+                                <option> T3</option>
+                                <option>T4</option>
+                                <option>RBS</option>
+                                <option>PPBS</option>
+
+                                <option>Urine sugar/option>
+                                <option> HDL</option>
+                                <option>S. Creatinine</option>
+                                <option>Uric acid</option>
+                                <option>Others</option>
+
+                            </select>
+
+
+
+                            <select width=300 class="b" style="width: 245px; height: 45px;" id="proba">
+                                <option></option>
+                                <option> BP</option>
+                                <option>Cholestero</option>
+                                <option>TG</option>
+                                <option>TSH</option>
+
+
+                                <option>LDL</option>
+                                <option> T3</option>
+                                <option>T4</option>
+                                <option>RBS</option>
+                                <option>PPBS</option>
+
+                                <option>Urine sugar/option>
+                                <option> HDL</option>
+                                <option>S. Creatinine</option>
+                                <option>Uric acid</option>
+                                <option>Others</option>
+                            </select>
+
+                            <select width=300 class="b" style="width: 245px; height: 45px;" id="probb">
+                                <option></option>
+                                <option> BP</option>
+                                <option>Cholestero</option>
+                                <option>TG</option>
+                                <option>TSH</option>
+
+
+                                <option>LDL</option>
+                                <option> T3</option>
+                                <option>T4</option>
+                                <option>RBS</option>
+                                <option>PPBS</option>
+
+                                <option>Urine sugar/option>
+                                <option> HDL</option>
+                                <option>S. Creatinine</option>
+                                <option>Uric acid</option>
+                                <option>Others</option>
+
+                            </select>
+
+                        </h3>
+                    </label>
+                </div>
+
+
+                <!-- jibon dhara -->
+                <div class="input-field" style="display: flex; gap: 20px;">
+                    <label for="uname">
+                        <h3> জীবন ধারা ও নির্দেশিকা
+                            <select width=300 class="b" style="width: 245px; height: 45px;" id="nirdes">
+                                <option></option>
+                                <option>Wt loss </option>
+                                <option> Wt gain</option>
+                                <option>Wt maintainance diet</option>
+                                <option>Anti-depressan</option>
+                                <option>Anti-anxiety</option>
+                                <option>Anti-tension</option>
+                                <option>Anti-insomnia</option>
+                                <option>Headache</option>
+                                <option>Migraine diet</option>
+                                <option>Anti-psoriatic</option>
+                                <option>Anti-allergic</option>
+                                <option>Anti-arthritic</option>
+                                <option>Anti-gout</option>
+                                <option>Anti-acne</option>
+                                <option>Anti-diabetic</option>
+                                <option>Anti-hypertensive</option>
+                                <option>Anti-anaemic diet</option>
+                                <option>Peptic ulcer</option>
+                                <option>Dyspepsia</option>
+                                <option>Heart-burn</option>
+                                <option>IBS </option>
+                                <option>IBD </option>
+                                <option>Piles</option>
+                                <option>Anal-fissure</option>
+                                <option>Anti-anorexic</option>
+                                <option>Anti-vomiting</option>
+                                <option>Diarrhoea</option>
+                                <option>Constipitation</option>
+                                <option>Lactose intolerance</option>
+                                <option>Glutein sensitive diet</option>
+                                <option>Renal (Stone +AGN +NS +CKD + Dialysis)</option>
+                                <option>Hepatic (Jaundice + Fatty liver)</option>
+                                <option>Thyroid (Hypo / Hyper)</option>
+                                <option>Cardiac</option>
+                                <option>Stroke</option>
+                                <option>Paralysis diet</option>
+                                <option>Micro-nutrient enriched balanced</option>
+                                <option>Functional food</option>
+                                <option>Immune-boosting</option>
+                                <option>Testosteronie- boosting</option>
+                                <option>PSD</option>
+                                <option>Night-pollution diet</option>
+                                <option>Elimination diet (By avoiding specific food)</option>
+                                <option>Growth improve</option>
+                                <option>Height Improve</option>
+                                <option>Toddler</option>
+                                <option>Adolescent</option>
+                                <option>Adult</option>
+                                <option>Autism diet</option>
+                                <option>High fiber</option>
+                                <option>High protein</option>
+                                <option>High calcium</option>
+                                <option>High iron diet</option>
+                                <option>Low protein</option>
+                                <option>Low fat</option>
+                                <option>Low CHO</option>
+                                <option>Low purine</option>
+                                <option>Uric acid lowering</option>
+                                <option>Cholesterol lowering</option>
+                                <option>TG lowering</option>
+                                <option>Lipid lowering</option>
+                                <option>Creatinine lowering</option>
+                                <option>Low Na</option>
+                                <option>Low K </option>
+                                <option>Electrolyte imbalance diet</option>
+                                <option>Pregnan</option>
+                                <option>Lactating</option>
+                                <option>GDM</option>
+                                <option>Post-menopausal</option>
+                                <option>PCOD</option>
+                                <option>PCOS diet</option>
+                                <option>Anti-aging</option>
+                                <option>Geriatric</option>
+                                <option>Body fitness</option>
+                                <option>Fairness</option>
+                                <option>Gym Diet</option>
+                                <option>Pre & post-operative</option>
+                                <option>Fever & post fever</option>
+                                <option>Weakness diet</option>
+                                <option>Cancer diet</option>
+
+                            </select>
+                            <select width=300 class="b" style="width: 245px; height: 45px;" id="nirdesa">
+                                <option></option>
+                                <option>Wt loss </option>
+                                <option> Wt gain</option>
+                                <option>Wt maintainance diet</option>
+                                <option>Anti-depressan</option>
+                                <option>Anti-anxiety</option>
+                                <option>Anti-tension</option>
+                                <option>Anti-insomnia</option>
+                                <option>Headache</option>
+                                <option>Migraine diet</option>
+                                <option>Anti-psoriatic</option>
+                                <option>Anti-allergic</option>
+                                <option>Anti-arthritic</option>
+                                <option>Anti-gout</option>
+                                <option>Anti-acne</option>
+                                <option>Anti-diabetic</option>
+                                <option>Anti-hypertensive</option>
+                                <option>Anti-anaemic diet</option>
+                                <option>Peptic ulcer</option>
+                                <option>Dyspepsia</option>
+                                <option>Heart-burn</option>
+                                <option>IBS </option>
+                                <option>IBD </option>
+                                <option>Piles</option>
+                                <option>Anal-fissure</option>
+                                <option>Anti-anorexic</option>
+                                <option>Anti-vomiting</option>
+                                <option>Diarrhoea</option>
+                                <option>Constipitation</option>
+                                <option>Lactose intolerance</option>
+                                <option>Glutein sensitive diet</option>
+                                <option>Renal (Stone +AGN +NS +CKD + Dialysis)</option>
+                                <option>Hepatic (Jaundice + Fatty liver)</option>
+                                <option>Thyroid (Hypo / Hyper)</option>
+                                <option>Cardiac</option>
+                                <option>Stroke</option>
+                                <option>Paralysis diet</option>
+                                <option>Micro-nutrient enriched balanced</option>
+                                <option>Functional food</option>
+                                <option>Immune-boosting</option>
+                                <option>Testosteronie- boosting</option>
+                                <option>PSD</option>
+                                <option>Night-pollution diet</option>
+                                <option>Elimination diet (By avoiding specific food)</option>
+                                <option>Growth improve</option>
+                                <option>Height Improve</option>
+                                <option>Toddler</option>
+                                <option>Adolescent</option>
+                                <option>Adult</option>
+                                <option>Autism diet</option>
+                                <option>High fiber</option>
+                                <option>High protein</option>
+                                <option>High calcium</option>
+                                <option>High iron diet</option>
+                                <option>Low protein</option>
+                                <option>Low fat</option>
+                                <option>Low CHO</option>
+                                <option>Low purine</option>
+                                <option>Uric acid lowering</option>
+                                <option>Cholesterol lowering</option>
+                                <option>TG lowering</option>
+                                <option>Lipid lowering</option>
+                                <option>Creatinine lowering</option>
+                                <option>Low Na</option>
+                                <option>Low K </option>
+                                <option>Electrolyte imbalance diet</option>
+                                <option>Pregnan</option>
+                                <option>Lactating</option>
+                                <option>GDM</option>
+                                <option>Post-menopausal</option>
+                                <option>PCOD</option>
+                                <option>PCOS diet</option>
+                                <option>Anti-aging</option>
+                                <option>Geriatric</option>
+                                <option>Body fitness</option>
+                                <option>Fairness</option>
+                                <option>Gym Diet</option>
+                                <option>Pre & post-operative</option>
+                                <option>Fever & post fever</option>
+                                <option>Weakness diet</option>
+                                <option>Cancer diet</option>
+
+                            </select>
+
+                            <select width=300 class="b" style="width: 245px; height: 45px;" id="nirdesb">
+                                <option></option>
+                                <option>Wt loss </option>
+                                <option> Wt gain</option>
+                                <option>Wt maintainance diet</option>
+                                <option>Anti-depressan</option>
+                                <option>Anti-anxiety</option>
+                                <option>Anti-tension</option>
+                                <option>Anti-insomnia</option>
+                                <option>Headache</option>
+                                <option>Migraine diet</option>
+                                <option>Anti-psoriatic</option>
+                                <option>Anti-allergic</option>
+                                <option>Anti-arthritic</option>
+                                <option>Anti-gout</option>
+                                <option>Anti-acne</option>
+                                <option>Anti-diabetic</option>
+                                <option>Anti-hypertensive</option>
+                                <option>Anti-anaemic diet</option>
+                                <option>Peptic ulcer</option>
+                                <option>Dyspepsia</option>
+                                <option>Heart-burn</option>
+                                <option>IBS </option>
+                                <option>IBD </option>
+                                <option>Piles</option>
+                                <option>Anal-fissure</option>
+                                <option>Anti-anorexic</option>
+                                <option>Anti-vomiting</option>
+                                <option>Diarrhoea</option>
+                                <option>Constipitation</option>
+                                <option>Lactose intolerance</option>
+                                <option>Glutein sensitive diet</option>
+                                <option>Renal (Stone +AGN +NS +CKD + Dialysis)</option>
+                                <option>Hepatic (Jaundice + Fatty liver)</option>
+                                <option>Thyroid (Hypo / Hyper)</option>
+                                <option>Cardiac</option>
+                                <option>Stroke</option>
+                                <option>Paralysis diet</option>
+                                <option>Micro-nutrient enriched balanced</option>
+                                <option>Functional food</option>
+                                <option>Immune-boosting</option>
+                                <option>Testosteronie- boosting</option>
+                                <option>PSD</option>
+                                <option>Night-pollution diet</option>
+                                <option>Elimination diet (By avoiding specific food)</option>
+                                <option>Growth improve</option>
+                                <option>Height Improve</option>
+                                <option>Toddler</option>
+                                <option>Adolescent</option>
+                                <option>Adult</option>
+                                <option>Autism diet</option>
+                                <option>High fiber</option>
+                                <option>High protein</option>
+                                <option>High calcium</option>
+                                <option>High iron diet</option>
+                                <option>Low protein</option>
+                                <option>Low fat</option>
+                                <option>Low CHO</option>
+                                <option>Low purine</option>
+                                <option>Uric acid lowering</option>
+                                <option>Cholesterol lowering</option>
+                                <option>TG lowering</option>
+                                <option>Lipid lowering</option>
+                                <option>Creatinine lowering</option>
+                                <option>Low Na</option>
+                                <option>Low K </option>
+                                <option>Electrolyte imbalance diet</option>
+                                <option>Pregnan</option>
+                                <option>Lactating</option>
+                                <option>GDM</option>
+                                <option>Post-menopausal</option>
+                                <option>PCOD</option>
+                                <option>PCOS diet</option>
+                                <option>Anti-aging</option>
+                                <option>Geriatric</option>
+                                <option>Body fitness</option>
+                                <option>Fairness</option>
+                                <option>Gym Diet</option>
+                                <option>Pre & post-operative</option>
+                                <option>Fever & post fever</option>
+                                <option>Weakness diet</option>
+                                <option>Cancer diet</option>
+
+                            </select>
+                        </h3>
+                    </label>
+                </div>
+
+
+                <!-- last line -->
+                <div class="input-field" style="display: flex; gap: 20px;">
+                    <label for="">
+                        <h3>শক্তি(কিলোক্যালোরি)
+                            <input type="text" placeholder="" class="b" id="sokti">
+                        </h3>
+                    </label>
+
+                    <label for="">
+                        <h3>Starting Diet:
+                            <input type="date" placeholder="enter your bith date" class="b" id="sdate">
+                        </h3>
+                    </label>
+
+                    <label for="">
+                        <h3>Next Visit:
+                            <input type="date" placeholder="enter your bith date" class="b" id="edate">
+                        </h3>
+                    </label>
+                </div>
+
+
+
+
+                <!-- ses -->
+                <div class="input-field">
+                    <label for="birthday">
+                        <h3>দৈনিক খাদ্য তালিকা <input type="text" class="sbx" id="dailyf" style="width: 50px;">
+                            <label>সপ্তাহ</label>
+                        </h3>
+                    </label>
+
+                </div>
+
+                <div class="input-field">
+                    <div style="text-align: center; ">
+                        <button type="button" style="height: 30px; width: 70px;background-color: skyblue;"
+                            onclick="addToCarttt()">Add </button>
+
+                    </div>
+                </div>
+
+                <form>
+
+                    <!-- Add more input fields, labels, and selectors as needed -->
+        </div>
+    </section>
+
+
+
+
+    <section class="shop container" id="sokalp">
+
+        <h2 class="secT section-title">সকালের পানীয় <input type="checkbox" class="itcqb"></h2>
+        <table class="product-table">
+            <tbody>
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> A</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+
+
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> B</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+
+
+
+    <!-- cha -->
+    <section class="shop container" id="cha">
+        <!-- Add a class to the table for easier access -->
+
+        <h2 class="secT section-title">চা <input type="checkbox" class="itcqb"></h2>
+        <table class="product-table">
+            <tbody>
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> A</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+
+
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> B</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+    <!-- sokal 7 -->
+    <section class="shop container" id="sokal">
+
+        <h2 class="secT section-title">সকাল ৭.০০-৮.00 <input type="checkbox" class="itcqb"></h2>
+        <table class="product-table">
+            <tbody>
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> A</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+
+
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> B</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+    <!-- modho sokal -->
+
+    <section class="shop container" id="msokal">
+
+        <h2 class="secT section-title">মধ্য-সকাল ১০.৩০-১১.০০<input type="checkbox" class="itcqb">
+        </h2>
+        <table class="product-table">
+            <tbody>
+             
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> A</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+
+
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> B</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!-- dupur -->
+    <section class="shop container" id="dupur">
+
+        <h2 class="secT section-title">দুপুর ১.৩০-২.00<input type="checkbox" class="itcqb">
+        </h2>
+        <table class="product-table">
+            <tbody>
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> A</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+
+
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> B</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+    <!-- bikal -->
+
+    <section class="shop container" id="bikel">
+
+        <h2 class="secT section-title">বিকেল : ৫.৩০ - ৬.০০<input type="checkbox" class="itcqb">
+        </h2>
+        <table class="product-table">
+            <tbody>
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> A</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+
+
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> B</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+    <!-- rat -->
+    <section class="shop container" id="rat1">
+
+        <h2 class="secT section-title">রাত: ৮.৩০-৯.00<input type="checkbox" class="itcqb">
+        </h2>
+        <table class="product-table">
+            <tbody>
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> A</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+
+
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> B</h2>
+                                <input type="number" class="value1" step="50" min="0" max="1000" placeholder="পরিমাণ">
+                                
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    
+                                    <select width="300" s style="width: 50px; height: 25px;"  class="op1">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+
+
+
+         
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="value2" step="50" min="0" max="1000" placeholder="পরিমাণ">
+
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit2">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                    <select width="300" style="width: 50px; height: 25px;" class="op2">
+                                        <option> </option>
+                                        <option> +</option>
+                                        <option>বা</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value3" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit3">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                
+                                <select width="300" style="width: 50px; height: 25px;"class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option> </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value4" placeholder="পরিমাণ">
+                                
+
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit4">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="number" step="50" min="0" max="1000" class="value5" placeholder="পরিমাণ">
+                                <div style="display: flex; gap: 10px; padding-top: 10px;">
+                                    <select style="width: 50px; height: 25px;" class="unit5">
+                                        <option> </option>
+                                        <option>গ্রাম</option>
+                                        <option>কিলোগ্রাম</option>
+                                    </select>
+                                <select width="300" style="width: 50px; height: 25px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+    <!-- majh rat -->
+    <section class="shop container" id="rat2">
+
+        <h2 class="secT section-title">রাত : ১০.০০ - ১০.৩০<input type="checkbox" class="itcqb">
+        </h2>
+        <table class="product-table">
+            <tbody>
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1"> A</h2>
+                                <input type="text" class="value1" placeholder="পরিমাণ">
+                                <select width="300" style="width: 50px; height: 45px;" class="op1">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="value2" placeholder="পরিমাণ">
+                                <select width="300" style="width: 50px; height: 45px;" class="op2">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="value3" placeholder="পরিমাণ">
+                                <select width="300" style="width: 50px; height: 45px;" class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="value4" placeholder="পরিমাণ">
+                                <select width="300" style="width: 50px; height: 45px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="value5" placeholder="পরিমাণ">
+                                <select width="300" style="width: 50px; height: 45px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+
+
+
+                <!-- it1 -->
+                <tr>
+                    <!-- Add a unique identifier for each product -->
+                    <td>
+                        <!-- Product details -->
+                        <div class="product-details">
+                            <div>
+                                <h2 class="product-title1">B</h2>
+                                <input type="text" class="value1" placeholder="পরিমাণ">
+                                <select width="300" style="width: 50px; height: 45px;" class="op1">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                            </div>
+                            <!-- Add more divs for additional inputs as needed -->
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title2">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="value2" placeholder="পরিমাণ">
+                                <select width="300" style="width: 50px; height: 45px;" class="op2">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title3">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="value3" placeholder="পরিমাণ">
+                                <select width="300" style="width: 50px; height: 45px;" class="op3">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title4">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="value4" placeholder="পরিমাণ">
+                                <select width="300" style="width: 50px; height: 45px;" class="op4">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                            </div>
+
+
+
+                            <div>
+                                <div>
+                                    <select width="300" style="width: 150px; height: 45px;" class="product-title5">
+                                        <option>a </option>
+                                        <option> b</option>
+                                        <option>c</option>
+                                        <option>d</option>
+                                        <option>e</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="value5" placeholder="পরিমাণ">
+                                <select width="300" style="width: 50px; height: 45px;" class="op5">
+                                    <option> </option>
+                                    <option> +</option>
+                                    <option>বা</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="product-checkbox">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+
+    <section class="shop container" id="khabar">
+
+
+        <!-- nirdesika -->
+        <div class="shop-content">
+
+            <div id="nir">
+                < <h2 class="secT section-title">খাদ্য গ্রহণ নির্দেশিকাঃ <input type="checkbox" class="itcqb">
+                        </h2>
+                        <h3>
+
+                            <ul id="todoList">
+                                <li onclick="addToCart(this)"> <input type="checkbox">* সূর্যমুখীর বীজ ভিটামিন ই এর ভালো
+                                    উৎস,
+                                    এতে একধরণের উপাদান মজুত রয়েছে যা আমাদের শরীরকে অস্টিওআর্থ্রাইটিস 
+                                    এবং ক্যান্সারের হাত থেকে দূরে রাখতে সহায়তা করে।</li>
+                                <li onclick="addToCart(this)"><input type="checkbox">* গাজর ও বিনসের রয়েছে প্রোটিন,
+                                    অ্যান্টি-অস্কিডেন্ট, ক্যারোটিন, ভিটামিন-বি, ফইবার যা শিশুর ওজন বাড়াতে সাহায্য করে।
+                                    এটি
+                                    শিশুদের পক্ষে একটি পুষ্টিকর খাবার। </li>
+                                <li onclick="addToCart(this)"><input type="checkbox"> * মৌসুমী সবজি ও ফলমূল খাদ্য তালিকায়
+                                    অন্তর্ভূক্ত করুন । </li>
+                                <li onclick="addToCart(this)"><input type="checkbox"> * খাদ্যে অলিভ অয়েল/ খাঁটি ঘি/ সরিষার
+                                    তেল
+                                    ব্যবহার করুন। </li>
+                                <li onclick="addToCart(this)"><input type="checkbox"> * প্রতিদিন 8-10 গ্লাস পানি পান করতে
+                                    হবে।
+                                </li>
+                                <li onclick="addToCart(this)"><input type="checkbox">*  পেট কখনো খালি রাখবেন না তাহলে
+                                    গ্যাস্ট্রিকের উপসর্গ দেখা দিতে পারে। ক্ষুধা লাগলেই সালাদ অথবা ফল খেয়ে পেট ভরে
+                                    নিবেন।
+                                </li>
+                                <li onclick="addToCart(this)"><input type="checkbox"> * ডিপ ফ্রাইড খাবার পরিহার করুন।­
+                                </li>
+                                <li onclick="addToCart(this)"><input type="checkbox">*  সপ্তাহে ২ দিন ছোট মাছ দিন। </li>
+                                <li onclick="addToCart(this)"><input type="checkbox">* ভিটামিন ডি + জিংক সমৃদ্ধ খাবারঃ
+                                    পোয়া,
+                                    কোরাল, আইড় মাছ, কলিজা, মুরগি, টমেটো, লালশাক, মিষ্টি আলু, মটরসুঁটি, মিষ্টি কুমড়ো,
+                                    গাজর,
+                                    আলু, ডিমের কুসুম, মাশরুম, কাজু বাদাম, আলমন্ড, মিষ্টিকুমড়োর বীজ, তিসির বীজ, তিল,
+                                    ইত্যাদি
+                                    প্রতিদিন খাদ্য তালিকাতে যোগ করুন। </li>
+                                <li onclick="addToCart(this)"><input type="checkbox">* ভিটামিন ডি + ফ্ল্যাভোনোয়েডযুক্ত
+                                    সমৃদ্ধ
+                                    খাবার: পালং শাক, আলমন্ড, টুনামাছ, পোয়া, কোরাল, আইড় মাছ, কলিজা, মুরগি, টমেটো, লালশাক,
+                                    মিষ্টি আলু, মটরসুঁটি, মিষ্টি কুমড়ো,গাজর, আলু, ডিমের কুসুম ইত্যাদি প্রতিদিন খাদ্য
+                                    তালিকাতে যোগ করুন। </li>
+                                <li onclick="addToCart(this)"><input type="checkbox">* ভিটামিন ডি + ফ্ল্যাভোনোয়েডযুক্ত
+                                    সমৃদ্ধ
+                                    খাবার: পালং শাক, আলমন্ড, টুনামাছ, পোয়া, কোরাল, আইড় মাছ, কলিজা, মুরগি, টমেটো, লালশাক,
+                                    মিষ্টি আলু, মটরসুঁটি, মিষ্টি কুমড়ো,গাজর, আলু, ডিমের কুসুম ইত্যাদি প্রতিদিন খাদ্য
+                                    তালিকাতে যোগ করুন। </li>
+
+
+
+
+
+                                <li onclick="addToCart(this)"><input type="checkbox">* প্রতিদিন সকাল ১০ টা-১১ টার দিকে
+                                    কমপক্ষে আধা ঘন্টা যতটুকু সম্ভব খোলা অবস্থায় সূর্যের আলোতে থাকার অভ্যাস করান। </li>
+                                <li onclick="addToCart(this)"><input type="checkbox">* ব্যালান্স ডায়েট ও পরিমিত
+                                    খাওয়া, স্বাস্থ্যসম্মত জীবনযাপন, আর নিয়মিত ব্যায়াম করা –মেনে চললে </li>
+                                <li onclick="addToCart(this)"><input type="checkbox"> * চকলেট, ভাজাপোড়া, লাল মাংস (গরু,
+                                    খাসি
+                                    ইত্যাদি), চিপস, প্রচুর চিনিযুক্ত বেকারি খাদ্য যেমন কেক, পেস্ট্রি কেক
+                                    এবং আয়রন ক্যাপসুল, কাঁচাকলা ইত্যাদি কম খাওয়াই ভালো। </li>
+                                <li onclick="addToCart(this)"><input type="checkbox">*  সেক্ষেত্রে ছোলার সাথে বাড়তি
+                                    তেল-মশলা
+                                    যোগ না করে টকদই, টমেটো, শশা, আদা কুচি, কাঁচা মরিচ, ধনিয়া পাতা ব্যবহার করে সালাদ তৈরি
+                                    করবেন,
+                                    এগুলি একি সাথে রোগ প্রতিরোধক হিসেবেও কাজ করে। </li>
+                                <li onclick="addToCart(this)"><input type="checkbox">* অঙ্কুরিত ছোলাতে ভিটামিন-সি এর
+                                    পরিমান
+                                    ভালো থাকে। ছোলা দুই রাত ভিজিয়ে রেখে দিলে অঙ্কুরিত হয়ে যায়। পরবর্তীতে অঙ্কুরিত কাঁচা
+                                    ছোলার সাথে
+                                    একটু আদা কুচি যোগ করে খেলে উপকার পাবেন। সুস্থ ব্যক্তি প্রতিদিন ৩০ থেকে ৬০ গ্রাম ছোলা
+                                    খেতে পারবেন।</li>
+
+                            </ul>
+
+                        </h3>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="shop container" id="bam">
+
+        <div class="shop-content">
+
+            <div>
+                <h2 class="secT section-title">ব্যায়াম নির্দেশিকাঃ<input type="checkbox" class="itcqb">
+                </h2>
+
+                <h3>
+
+                    <ul id="todoList">
+
+                        <li onclick="addToCart(this)"><input type="checkbox"> *ব্যায়াম (Physical Exercise) না করে শুধু
+                            ডায়েট মেনে খাবার খেলেই যে আপনার ওজন কমে যাবে এই ধারণাটি সম্পূর্ণ ভুল। </li>
+                        <li onclick="addToCart(this)"><input type="checkbox"> *দীর্ঘ সময় ঘুমের পর সকালে ব্যায়াম সারা দিন
+                            ফুরফুরে রাখতে পারে। এ ছাড়া সন্ধ্যার আগে বিকেলটাও ব্যায়াম করার জন্য উপযুক্ত সময়।
+                        </li>
+                        <li onclick="addToCart(this)"><input type="checkbox">*  যেহেতু ব্যায়াম করলে শরীরের ঘাম ঝরে, তাই
+                            নরম আবহাওয়াতেই ব্যায়াম করা ভালো। অনেকে ব্যস্ততার জন্য সারা দিন সময় করে উঠতে পারেন না, তাঁরা
+                            রাতে ব্যায়াম করেন। এতে কোনো সমস্যা নেই।
+                        </li>
+                        <li onclick="addToCart(this)"><input type="checkbox">*  যাঁরা সারা দিন বাসায় থাকেন, তাঁরা চাইলে
+                            যেকোনো সময় ব্যায়াম করতে পারেন।</li>
+                        <li onclick="addToCart(this)"><input type="checkbox">*  ব্যায়ামের সময় অনেক বেশি খাবার খাওয়া ঠিক
+                            নয়। হালকা খাবার যেমন, একটা কলা বা বিস্কুট খেয়ে ব্যায়াম করলে উপকার পাওয়া যাবে।</li>
+                        <li onclick="addToCart(this)"><input type="checkbox">*  ব্যায়াম করার আগে বা পরপরই বেশি পরিমাণে
+                            পানি খাওয়া ঠিক নয়। ব্যায়ামের পর একটু বিশ্রাম নিয়ে তারপর পানি খেতে পারেন।</li>
+                        <li onclick="addToCart(this)"><input type="checkbox">*  অনেক বেশি অসুস্থ থাকলে ব্যায়াম করার দরকার
+                            নেই। বিশেষ করে গর্ভকালীন চিকিৎসকের পরামর্শ ছাড়া কোনো ব্যায়াম করা উচিত নয়।</li>
+                        <li onclick="addToCart(this)"><input type="checkbox">*  প্রতিদিন নিয়ম করে ৩০-৪০ মিনিট হাঁটাও
+                            ব্যায়ামের অংশ। </li>
+                        <li onclick="addToCart(this)"><input type="checkbox">* খোলা জায়গায় ব্যায়াম করা সবচেয়ে ভালো।
+                            প্রকৃতির নির্মল পরিবেশে সবুজের মধ্যে ব্যায়ামের মাধ্যমে অনেক রোগের উপসর্গ কমে যায়। </li>
+
+                    </ul>
+
+                </h3>
+            </div>
+
+        </div>
+        <!-- Your shop content -->
+
+
+
+
+
+    </section>
+
+
+
+    <section class="shop container">
+
+        <div>
+            <h2 class="secT section-title">ব্যায়াম <input type="checkbox" class="itcqb">
+        </div>
+
+        <div class="shop-content">
+            <div id="b1">
+                <h2 style="text-align: center;">Style-1: যোগাসন</h2>
+                <p>নিয়মিত যোগাসনের মাধ্যমে কোষ্ঠকাঠিন্য, উচ্চরক্তচাপ, ডায়াবেটিস, পায়ের ব্যাথা ও হাঁটুর ব্যাথা কমাতে –
+                </p>
+                <img src="jog.png" alt="" style="height: 300px; width:300px;">
+                <pre>
+                        এক্ষেত্রে প্রথমেই বাম উরুর উপর ডান পা, ডান উরুর উপর বাম পা রাখতে হবে এবং দু হাঁটু মাটিতে ঠেকে থাকবে। মেরুদণ্ড সোজা রাখতে হবে। 
+                        এরপর ডান হাত বাম উরুর উপর এবং বাম হাত ডান উরুর উপর রাখতে হবে এবং শ্বাস-প্রশ্বাস অবশ্যই স্বাভাবিক রাখতে হবে।
+    
+                        *পায়ের বাত দূর করতে ও পায়ের পেশি সবল করতে এই আসন খুবই কার্যকরী। 
+                        এই আসনের ফলে মেরুদণ্ড সরল  ও নমনীয় হয়।  মানসিক একাগ্রতা ও ধৈর্য বৃদ্ধি করে পড়াশুনায় মনোযোগ বাড়ায়।
+    
+                        *তবে যাদের পায়ের গোড়ালিতে ব্যাথা আছে তারা এই যোগব্যায়াম করার সময় সতর্ক থাকবেন।
+                    </pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+
+
+        <!-- bam2 -->
+        <div class="shop-content">
+            <div id="b2">
+                <h2>Style-2:লেগ রেইস উইথ মুভমেন্ট </h2>
+                <img src="jog2.png" alt="" style="height: 300px; width:300px;">
+                <h4>লেগ রেইস উইথ মুভমেন্ট:</h4>
+                <pre>
+                                     চিত হয়ে শুয়ে কোমরের নিচে দুটো হাত রেখে দু’পা মাটি থেকে ৩০ ডিগ্রি ওঠানো ও নামানো করতে হবে।
+                                  সোজা হয়ে মেঝেতে শুয়ে পড়ুন। পা দুটো জোড়া করে সোজা ৯০ ডিগ্রি ওপরে তুলে দিন। হাত দুটো সোজা পাশে থাকবে।
+                                   এবার নিশ্বাস নিতে নিতে পা দুটো জোড়া অবস্থায় নিচে নামান। তবে পা দুটো মেঝেতে লেগে যাবে না। 
+                                   আপনার পায়ের সঙ্গে মেঝের কিছুটা দূরত্ব থাকবে। 
+                                   ওই অবস্থায় নিশ্বাস ছাড়তে ছাড়তে আবার পা দুটো ৯০ ডিগ্রি ওপরে তুলে দিন। আবার নিচে নামান।
+                                    মাথা থেকে কোমর পর্যন্ত মেঝেতে লেগে থাকবে। এভাবে ১২ বার করে দুই সেট করুন। 
+                                    এই ব্যায়াম তলপেটের জন্য খুবই উপকারী।
+                                </pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+
+        <!-- b3 -->
+        <div class="shop-content">
+            <div id="b3">
+                <h2>Style-3: সেতুবন্ধাসন</h2>
+                <div>
+                    <img src="jog3.1.png" alt="" style="height: 300px; width:300px;">
+                    <img src="jog3.2.png" alt="" style="height: 300px; width:300px;">
+                </div>
+                <pre>
+                    প্রথমে মাটিতে একটি ম্যাট পেতে নিন। এরপরে ওই ম্যাটের ওপর শুয়ে পড়ুন। 
+                    ধীরে ধীরে পা দুটি ভাঁজ করে নিন। খেয়াল রাখবেন আপনার পা ও গোড়ালি যেন একই রেখা বরাবর থাকে।
+                     হাত দুটি দুপাশে নিচের দিকে মুখ করে রাখুন। এবার ধীরে ধীরে শ্বাস নিয়ে পিঠকে ওপরের দিকে তুলুন।
+                    সেই সঙ্গে দুটি হাত দিয়ে পায়ের গোড়ালি ধরার চেষ্টা করুন।
+    
+    
+    
+                    এই সময়ে আপনার পুরো শরীরের ওজন থাকবে কাঁধ, বাহু ও পায়ের ওপরে। 
+                    এইভাবে ২০ সেকেন্ড থাকতে হবে। তারপর হাত ছেড়ে দিয়ে আস্তে আস্তে পিঠ নামিয়ে আনুন। এইভাবে ৩-৪ বার করুন।
+                   </pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+
+        <!-- b4 -->
+        <div class="shop-content">
+            <div id="b4">
+                <h2>Style-4: সিট আপ</h2>
+                <img src="jog4.png" alt="" style="height: 300px; width:300px;">
+                <pre>
+                    কোনো একটি সমতল জায়গায় বা মেঝেতে শুয়ে পড়ুন। 
+                    এবার পা দুটো ভাঁজ করে দিন। হাত থাকবে হাঁটু বরাবর সোজা, সামনের দিকে। 
+                    এবার শ্বাস ছাড়তে ছাড়তে সোজা সামনের দিকে উঠে বসুন।
+                     পা ভাঁজ অবস্থায় থাকবে। এবার আবার আগের অবস্থায় শুয়ে যান। 
+                     বসা অবস্থায় বেশিক্ষণ থাকবেন না। উঠে আবার শুয়ে পড়বেন, আবার উঠে বসুন। এভাবে হবে একবার। 
+    
+                     আপনি এভাবে মোট ১২ বার করবেন। ১২ বার হয়ে গেলে এক মিনিট শুয়ে বিশ্রাম নেবেন। 
+                     এক মিনিট পরে ঠিক একই নিয়মে আবার শুরু করবেন। আবার ১২ বার করবেন।
+                      এভাবে ১২ বারে হবে এক সেট। আপনাকে এভাবে দুই সেট করতে হবে প্রাথমিক অবস্থায়। 
+                      পরে সেট বাড়িয়ে তিন সেট করতে পারেন।
+    
+                </pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+        <!-- b5 -->
+        <div class="shop-content">
+            <div id="b5">
+                <h2>Style-5: ক্রাঞ্চেস</h2>
+                <img src="jog5.1.png" alt="" style="height: 300px; width:300px;">
+                <img src="jog5.2.png" alt="" style="height: 300px; width:300px;">
+
+                <pre>
+                 সোজা হয়ে মেঝেতে শুয়ে পড়ুন। পা দুটো একটু ফাঁকা রেখে ভাঁজ করে দিন। 
+                 হাত দুটো আপনার মাথার দুই পাশে অর্থাৎ কানের পেছনে রাখুন। এবার নিশ্বাস ছাড়তে ছাড়তে ওপরের দিকে উঠুন। 
+                 খেয়াল রাখবেন মুখ দিয়ে ফুঁ দেওয়ার মতো করে নিশ্বাস ছাড়তে হবে এবং ঘাড়ে কোনো চাপ দেবেন না। 
+                 আপনি মনোযোগ দেবেন আপনার পেটের মাংসপেশিতে।
+
+
+                 ঘাড় বাঁকা করবেন না। ঘাড় সোজা থাকবে এবং আপনি তাকিয়ে থাকবেন ওপরের দিকে অর্থাৎ সিলিংয়ের দিকে। 
+                 এবার নিশ্বাস নিতে নিতে নিচের দিকে নামবেন, তবে পুরো মেঝেতে আপনার মাথা লেগে যাবে না;
+                  মেঝে থেকে আপনার মাথায় কিছুটা ফাঁক থাকবে।
+                 এভাবে আবার ওপরে উঠুন এবং নিচের দিকে ক্রাঞ্চ করে নামুন। খুব দ্রুতও করা যাবে না। মাঝারি একটা তালে করতে হবে।
+
+                 আপনি এভাবে মোট ১২ বার করবেন। ১২ বার হয়ে গেলে এক মিনিট শুয়ে বিশ্রাম নেবেন। 
+                 এবং এক মিনিট পরে ঠিক একই নিয়মে আবার শুরু করবেন। আবার ১২ বার করবেন। 
+                 এভাবে ১২ বারে হবে এক সেট; এভাবে দুই সেট করতে হবে। আপনার পেটের মাংসপেশির সংকোচন ও প্রসারণের দিকে খেয়াল রাখুন।
+
+
+
+
+
+                </pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+        <!-- b6 -->
+        <div class="shop-content">
+            <div id="b6">
+                <h2>Style-6: রাশিয়ান এবস টুইস্ট</h2>
+                <img src="jog6.png" alt="" style="height: 300px; width:300px;">
+                <pre>
+                পা দুটো সামনে সোজা করে দিয়ে বসে যান। এবার পা দুটো ভাঁজ করে পায়ের পাতা মেঝে থেকে একটু উঁচুতে নিয়ে যান। 
+                কোমর থেকে শরীরের ওপরের অংশ একটু পেছন দিকে নিয়ে যান।
+                 এবং হাত দুটো একবার ডানদিকে ঘুরে ডান কোমরের কাছে আবার বা দিকে ঘুরে বা কোমরের কাছে আনুন।
+
+
+                এভাবে ১২ বার করে দুই সেট করবেন। এতে আপনার কোমরের পাশের মেদ এবং তল পেটের মেদ কমবে।
+                 
+            </pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+
+
+        <!-- b7 -->
+        <div class="shop-content">
+            <div id="b7">
+                <h2>Style-7: পুশ-আপ</h2>
+                <img src="jog7.png" alt="" style="height: 300px; width:300px;">
+
+                <pre>
+                পুশ-আপ আপনি যে কোনও সময়ে করতে পারেন। এটি খুব সহজ একটি ব্যায়াম। নিয়মমাফিক করলে ওজন দ্রুত হ্রাস পাবে। 
+                এই ব্যায়ামটি করতে কোনও যন্ত্রের প্রয়োজন হয় না।
+
+                পুশ-আপ ব্যায়ামটি করলে শরীরের পেশিকে শক্তিশালী করে। শরীরের বাড়তি ওজন দ্রুত হ্রাস পাবে।
+              </pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+
+
+
+        <!-- b8 -->
+        <div class="shop-content">
+            <div id="b8">
+                <h2>Style-8: লম্বা হওয়ার ব্যায়াম</h2>
+                <pre>ঝুলানোর ব্যায়াম: এটি একটি রড বা অন্য শক্ত কোন কিছুর মাধ্যমে ঝুলতে হয়।
+                 এ সময় পায়ের আঙুলগুলো মাটির দিকে রাখতে হয়। এবং উপরের দিকে মুখ তুলে রাখতে হয়।
+                  যাই হোক প্রথমে একটি লোহার পাইপ বা বার একটু উঁচুতে রাখুন।প্রথম এবং সর্বাগ্রে,
+                   এটি আপনার ভার বহন করতে পারে কিনা তা পরীক্ষা করে দেখুন।
+                    সামান্য লাফিয়ে লোহার দন্ডটি ধরে রাখুন।আপনার বাহু এবং মেরুদণ্ড সোজা আছে তা নিশ্চিত করুন।
+                    প্রতিবার 20 থেকে 30 সেকেন্ডের জন্য ঝুলিয়ে রাখুন, এটি দিনে 3-4 বার করুন।</pre>
+                <img src="jog8.png" alt="" style="height: 300px; width:300px;">
+                <h3>লম্বা হওয়ার দড়ি লাফ ব্যায়াম: </h3>
+                <pre>যদি ব্যায়াম করা আপনার কাছে কঠিন কাজ বলে মনে হয়, তাহলে এই দড়ি লাফ ব্যায়াম আপনার জন্য লম্বা করার খুবই উপযোগী। 
+                দড়ি জাম্পিং এমন একটি জিনিস যে প্রতিবার আপনি লাফ দেওয়ার সময় আপনার পা লম্বা করতে হবে। 
+                জাম্পিং বিভিন্ন উপায়ে করা যেতে পারে – ট্রামপোলিন জাম্পিং বা দড়ি লাফ, উভয়ই আপনাকে আপনার সর্বোচ্চ পৌঁছতে সাহায্য করবে।
+                 লাফানোর সময়, নিশ্চিত করুন যে আপনার উভয় পা একই সময়ে উপরে এবং নীচে রয়েছে। নরম জুতোয় ব্যায়াম করুন বা শক্ত মেঝে এড়িয়ে চলুন।</pre
+            
+                 <h3>লম্বা হওয়ার সাঁতার ব্যায়াম- </h3>
+                 <pre>উচ্চতা বৃদ্ধির জন্য সাঁতার সর্বোত্তম ব্যায়াম, সাঁতার হল আরেকটি স্বাস্থ্যকর এবং
+                     মজার ব্যায়াম যা আপনার বাচ্চাদের সামগ্রিকভাবে বেড়ে উঠতে সাহায্য করতে পারে।
+                     এটি একটি সম্পূর্ণ শারীরিক ব্যায়াম যা শরীরের সমস্ত পেশীতে কাজ করে।
+                      সাঁতার ছাড়াও, শরীরে অন্যান্য স্ট্রেচিং ব্যায়াম রয়েছে যা মেরুদণ্ডকে শক্তিশালী করে এবং উচ্চতা বৃদ্ধিতে সহায়ক ভূমিকা পালন করে।</pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+        <!-- b9 -->
+        <div class="shop-content">
+            <div id="b9">
+                <h2>Style- 9. A and 9. B:</h2>
+                <img src="jog9.1.png" alt="" style="height: 300px; width:300px;">
+                <img src="jog9.2.png" alt="" style="height: 300px; width:300px;">
+                <h3>Style-9. A: </h3>
+                <pre>প্রথমে দুই হাঁটুর ওপর ভর করে দাঁড়ানয়োজনীয়/ হাঁটুসহ দুই পা লেগে থাকবে। মেরুদণ্ড সোজা থাকবে। 
+                    পায়ের পাতা থেকে হাঁটু পর্যন্ত মাটির সঙ্গে লেগে থাকবে।</pre>
+                <h3>Style-9. B: </h3>
+                <pre>
+                    এবার দম স্বাভাবিক রেখে দুহাত দিয়ে দুপায়ের গোড়ালি ধরুন। বুক ও পেট যতটা সম্ভব সামনের দিকে 
+                    এবং ঘাড় ও মাথা পেছন দিকে বাঁকিয়ে ধনুকের মতো করুন। এ অবস্থায় ১০ থেকে ১৫ সেকেন্ড অবস্থান করুন।
+                     তারপর আবার পূর্বের অবস্থায় ফিরে আসুন। এভাবে তিন থেকে পাঁচ বার করতে পারেন।
+                      তবে মনে রাখবেন-যদি প্রথম অবস্থায় পা জোড়া লাগিয়ে না.A করতে পারেন তাহলে দুই হাঁটু, পা ফাঁকা করে করলে সহজে করতে পারবেন। 
+                      দুহাত একত্রে গোড়ালির ওপর না রাখতে পারলে একহাত দিয়ে ধরুন, অন্য হাত দিয়ে খাটের পাশে করলে খাট ধরুন কিংবা দেয়াল ধরে করুন।
+                       এভাবে হাত পাল্টে একবার ডান হাত দিয়ে ডান পা আবার বাম হাত দিয়ে বাম পা ধরতে চেষ্টা করুন। 
+                       এভাবে কিছুদিন অভ্যাস করলে সঠিক ভঙ্গিমায় আসনটি করতে পারবেন।
+                </pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+
+
+        <!-- b10 -->
+        <div class="shop-content">
+            <div id="b10">
+                <h2>Style- 10. A, B and C:</h2>
+                <img src="jog10.1.png" alt="" style="height: 300px; width:300px;">
+                <img src="jog10.2.png" alt="" style="height: 300px; width:300px;">
+                <img src="jog10.3.png" alt="" style="height: 300px; width:300px;">
+                <pre>
+                    10. A. প্রথমে শরীর সোজা রেখে দাঁড়ান। এবার দুই পা আড়াই থেকে তিন ফুট পরিমাণ ফাঁক করুন।
+                     এরপর হাত দুটো শরীরের দুপাশে কাঁধ বরাবর উঁচু করুন। হাতের তালু নিম্নমুখী করে রাখুন। 
+                     10. B. এবার পা থেকে কোমর পর্যন্ত শরীর সোজা রেখে সামনে/ পেছনে না ঝুঁকে আস্তে আস্তে ডান দিকে বাঁকা করুন।
+                      খেয়াল রাখুন যেন হাঁটু না ভাঙে। এবার আস্তে আস্তে ডান দিকে বাঁকিয়ে ডান পায়ের পাতা স্পর্শ করতে চেষ্টা করুন। 
+                      সহজভাবে যতটুকু হাত যায় ততটুকুই রাখুন। দৃষ্টি থাকবে ওপরের হাতের আঙুলে। কিছুদিন অভ্যাস করলে আসনটি সঠিক ভঙ্গিমায় করতে পারবেন
+                      10.C. এভাবে প্রথমে ডানদিকে, পরে বামদিকে করুন। একবার ডানে আর একবার বামে মিলে হয় এক প্রস্থ। এভাবে তিন থেকে পাঁচ প্রস্থ করতে পারেন। 
+                      প্রত্যেক পাশে অবস্থানে সময় নিন ১০ থেকে ১৫ সেকেন্ড। দম স্বাভাবিক রাখুন। যেদিকে বাঁকাবেন সেদিকের হাত নিচে ও অপর হাত মাথার ওপরে তুলে রাখুন। 
+                      দৃষ্টি থাকবে ওপরের হাতের আঙুলে
+                </pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+
+
+        <!-- b11 -->
+        <div class="shop-content">
+            <div id="b11">
+                <h2>Style- 11. প্লাঙ্ক এক্সারসাইজ</h2>
+                <img src="jog11.png" alt="" style="height: 300px; width:300px;">
+                <pre>
+                    মাটি বা ম্যাটের উপর উপুড় হয়ে শুয়ে পড়ুন, আপনার হাত দুটি কাঁধ বরাবর থাকবে৷ এবার শরীরটাকে ধীরে ধীরে উপরে তুলুন হাতের পাতায় ভর দিয়ে, 
+                    পায়ের ভর থাকবে আপনার বুড়ো আঙুলের উপর, পা-টাও কাঁধ বরাবর থাকবে৷ হাত পুরো স্ট্রেচ করুন, হাঁটু আর পেটও মাটি থেকে যতটা পারেন তুলে নিন৷
+                     পেটটা ভিতর দিকে টেনে রাখবেন৷ ক্রমশ অভ্যেস হয়ে এলে দু’পায়ের মাঝের ফাঁকটা ছোট করে নেবেন, তাতে চ্যালেঞ্জ বাড়বে৷ কাজ হয় হাত, পা, নিতম্ব 
+                     আর কোর মাসলের উপর৷
+                   প্রথম দিকে কনুই পর্যন্ত মাটির সঙ্গে ঠেকিয়ে প্লাঙ্ক করুন। অভ্যস্ত হয়ে গেলে হাতের পাতা ও পায়ের পাতা মাটিতে রেখে বাকি শরীরটা হাওয়ায় তুলে দিন।
+                    প্লাঙ্কের সময় পেট ভিতরের দিকে টেনে রাখতে পারলে আরও বেশি উপকার পাবেন। পেট ও কোমরের কোর মাসলকে শক্তিশালী করে তুলতে প্লাঙ্কের জবাব নেই।
+                </pre>
+            </div>
+            <button style="height: 30px; width: 70px;" type="button" onclick="addToCartt(this)">Add</button>
+        </div>
+
+    </section>
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+
+
+
+        ///
+
+        function addToCartt(button) {
+            // Get the parent shop-content div
+            const shopContentDiv = button.parentElement;
+
+            // Clone the shop content div and its contents
+            const clonedShopContentDiv = shopContentDiv.cloneNode(true);
+
+            // Add the cloned div to the cart content
+            const cartContent = document.querySelector('.cart-content');
+            cartContent.appendChild(clonedShopContentDiv);
+        }
+
+
+
+
+
+
+
+        function calculateBMI() {
+            var weight = parseFloat(document.getElementById('wet').value);
+            var height = parseFloat(document.getElementById('height').value);
+            var calculateCheckbox = document.getElementById('calculateCheckbox');
+
+            if (!calculateCheckbox.checked || isNaN(weight) || isNaN(height)) {
+                document.getElementById('bmi').value = '';
+                return;
+            }
+
+            // Convert height from cm to meters
+            var heightInMeters = height / 100;
+
+            // Calculate BMI
+            var bmi = weight / (heightInMeters * heightInMeters);
+
+            // Round BMI to two decimal places
+            bmi = bmi.toFixed(2);
+
+            document.getElementById('bmi').value = bmi;
+        }
+
+
+
+        function addToCart(item) {
+            // Clone the text content of the clicked item
+            var itemName = item.textContent;
+
+            // Create a new div for the cart item
+            var cartItem = document.createElement("div");
+            cartItem.textContent = itemName;
+
+            // Reference the existing cart content
+            var cartContent = document.querySelector(".cart-content");
+
+            // Append the cart item to the cart content
+            cartContent.appendChild(cartItem);
+
+            // Remove the item from the to-do list
+            item.parentNode.removeChild(item);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // for specskfna,dfbnmasd 
+        // JavaScript to handle checkbox changes
+        const checkboxesm = document.querySelectorAll('.itcqb');
+        const carrt = document.querySelector('.cart-content');
+
+        checkboxesm.forEach((checkbox) => {
+            checkbox.addEventListener('change', () => {
+
+
+                const text = checkbox.parentElement.textContent.trim(); // Get the text within <h2>
+                const cartItem = document.createElement('h2');
+                cartItem.classList.add('cart-item');
+                cartItem.style.textAlign = 'center';
+                cartItem.textContent = text;
+
+
+                // const cartItem =`<h3 style="text-align: center;">${text}</h3>`
+
+                carrt.appendChild(cartItem); // Add to cart when checked
+
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- scroll top -->
+    <a href="#" class="scroll">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+    <!-- js link -->
+    <script src="main.js"></script>
+    <!-- jquery -->
+    <script src="printjs.js"></script>
+
+
+
+</body>
+
+</html>

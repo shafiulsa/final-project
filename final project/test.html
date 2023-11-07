@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List with Cart</title>
+    <style>
+        /* Your CSS styles for cart and to-do list go here */
+
+        /* Style for the items in the to-do list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List with Cart</h1>
+    <h2>To-Do List:</h2>
+    <ul id="todoList">
+        <li onclick="addToCart(this)">Item 1</li>
+        <li onclick="addToCart(this)">Item 2</li>
+        <li onclick="addToCart(this)">Item 3</li>
+    </ul>
+
+    <!-- cart -->
+    <div class="cart" id="c">
+        <h2 class="cart-title">আপনার খাবার তালিকা</h2>
+        <!-- content -->
+        <div class="cart-content" id="cart">
+            <!-- Cart items will be added here -->
+        </div>
+        <i class='bx bx-x' id="close-cart"></i>
+    </div>
+
+    <script>
+        function addToCart(item) {
+            // Clone the clicked item and add it to the cart
+            var cart = document.getElementById('cart');
+            var itemClone = item.cloneNode(true);
+            cart.appendChild(itemClone);
+
+            // Remove the item from the to-do list
+            item.parentNode.removeChild(item);
+        }
+    </script>
+</body>
+</html>
